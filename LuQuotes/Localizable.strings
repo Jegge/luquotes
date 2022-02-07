@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  LuQuotes
+
+  Created by Sebastian Boettcher on 07.02.22.
+  
+*/
+"Category_none" = "None";
+"Category_introduction" = "Introduction";
+"Category_expectations" = "Expectations";
+"Category_fear" = "Fear";
+"Category_directExperience" = "Direct Experience";
+"Category_labelingAndLanguage" = "Labeling and Language";
+"Category_story" = "Story";
+"Category_exercises" = "Exercises";
+"Category_looking" = "Looking";
+"Category_gate" = "Gate";
+"Category_afterGate" = "After Gate";
+
