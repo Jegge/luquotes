@@ -21,6 +21,17 @@ class QuoteViewController: UIViewController {
         self.categoryLabel.text = self.quote.category.localizedDescription
         self.categoryLabel.textColor = self.quote.category.color
         self.categoryImage.image = UIImage(named: "logo")?.withTintColor(self.quote.category.color)
-        self.contentTextView.text = self.quote.message
+
+        let paragraph = NSMutableParagraphStyle()
+        paragraph.hyphenationFactor = 0.8
+        paragraph.alignment = .justified
+
+        let attributes: [NSAttributedString.Key: Any] = [
+            .paragraphStyle: paragraph,
+            .font: self.contentTextView.font!,
+            .foregroundColor: self.contentTextView.textColor!
+        ]
+
+        self.contentTextView.attributedText = NSAttributedString(string: self.quote.message, attributes: attributes)
     }
 }
