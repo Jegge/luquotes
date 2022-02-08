@@ -36,6 +36,7 @@
 		D25EABF727B1C259000CBEA7 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABF627B1C259000CBEA7 /* QuoteCell.swift */; };
 		D25EABFB27B1E23B000CBEA7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D25EABFA27B1E23B000CBEA7 /* .gitignore */; };
 		D25EABFD27B24B85000CBEA7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D25EABFC27B24B85000CBEA7 /* Settings.bundle */; };
+		D25EAC0127B251D9000CBEA7 /* AppIcon.svg in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0027B251D9000CBEA7 /* AppIcon.svg */; };
 		D25EAC0327B253BF000CBEA7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +65,7 @@
 		D25EABE527B1725E000CBEA7 /* Quotes.afterGate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.afterGate.txt; sourceTree = "<group>"; };
 		D25EABE727B1751A000CBEA7 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		D25EABE927B1838B000CBEA7 /* UserDefaultExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtensions.swift; sourceTree = "<group>"; };
-		D25EABEC27B1A1D5000CBEA7 /* logo.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = logo.svg; sourceTree = "<group>"; };
+		D25EABEC27B1A1D5000CBEA7 /* Logo.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Logo.svg; sourceTree = "<group>"; };
 		D25EABED27B1AA91000CBEA7 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		D25EABF027B1B1CB000CBEA7 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		D25EABF227B1BB01000CBEA7 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
@@ -72,6 +73,7 @@
 		D25EABF627B1C259000CBEA7 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		D25EABFA27B1E23B000CBEA7 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		D25EABFC27B24B85000CBEA7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		D25EAC0027B251D9000CBEA7 /* AppIcon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AppIcon.svg; sourceTree = "<group>"; };
 		D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +93,7 @@
 			children = (
 				D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */,
 				D25EABFA27B1E23B000CBEA7 /* .gitignore */,
-				D25EABEC27B1A1D5000CBEA7 /* logo.svg */,
+				D25EAC0427B253C9000CBEA7 /* Assets */,
 				D25EABB127B14D49000CBEA7 /* LuQuotes */,
 				D25EABB027B14D49000CBEA7 /* Products */,
 			);
@@ -181,6 +183,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		D25EAC0427B253C9000CBEA7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D25EABEC27B1A1D5000CBEA7 /* Logo.svg */,
+				D25EAC0027B251D9000CBEA7 /* AppIcon.svg */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +265,7 @@
 				D25EABBC27B14D4A000CBEA7 /* Assets.xcassets in Resources */,
 				D25EABDE27B16EBB000CBEA7 /* Quotes.story.txt in Resources */,
 				D25EABFB27B1E23B000CBEA7 /* .gitignore in Resources */,
+				D25EAC0127B251D9000CBEA7 /* AppIcon.svg in Resources */,
 				D25EABE627B1725E000CBEA7 /* Quotes.afterGate.txt in Resources */,
 				D25EABE027B16F6C000CBEA7 /* Quotes.exercises.txt in Resources */,
 				D25EABE227B170EF000CBEA7 /* Quotes.looking.txt in Resources */,
