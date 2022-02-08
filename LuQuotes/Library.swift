@@ -22,7 +22,20 @@ class Library {
             .filter { !$0.1.isEmpty }
             .reduce(into: [:]) { $0[$1.0] = $1.1 }
 
-        self.bookmarks = UserDefaults.standard.bookmarks
+        // Reload the quote's message in the bookmarks to prevent having entries in the wrong language
+        // in the bookmark view
+        self.bookmarks = Set(UserDefaults.standard.bookmarks.map {
+            switch $0 {
+            case .category:
+                return $0
+            case .quote(quote: let quote):
+                if let translated = self.quote(at: quote.index, in: quote.category) {
+                    return .quote(quote: translated)
+                } else {
+                    return $0
+                }
+            }
+        })
     }
 
     func quote (at index: Int, in category: Category) -> Quote? {
