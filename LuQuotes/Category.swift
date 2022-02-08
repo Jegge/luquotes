@@ -32,6 +32,10 @@ enum Category: Int, LocalizedStringConvertible, CaseIterable, Codable, Equatable
         return Category(rawValue: self.rawValue - 1)
     }
 
+    var bookmark: Bookmark {
+        return .category(category: self)
+    }
+
     static func < (lhs: Category, rhs: Category) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }

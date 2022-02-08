@@ -17,7 +17,7 @@ class BookmarksViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.clearsSelectionOnViewWillAppear = false
-        self.entries = Category.allCases.flatMap {  [.category(category: $0)] + self.library.bookmarks(in: $0) }
+        self.entries = Category.allCases.flatMap { self.library.bookmarks(in: $0).sorted(by: <) }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,9 +43,9 @@ class BookmarksViewController: UITableViewController {
             (cell as? CategoryCell)?.category = category
             return cell
 
-        case .quote(let quote):
+        case .quote(category: let category, index: let index):
             let cell = tableView.dequeueReusableCell(withIdentifier: "QuoteCell", for: indexPath)
-            (cell as? QuoteCell)?.quote = quote
+            (cell as? QuoteCell)?.quote = self.library.quote(at: index, in: category)
             return cell
         }
     }
@@ -61,7 +61,7 @@ class BookmarksViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            self.library.bookmarks.remove(self.entries[indexPath.row])
+            self.library.remove(bookmark: self.entries[indexPath.row])
             self.entries.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
@@ -71,10 +71,10 @@ class BookmarksViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let categoryCell = sender as? CategoryCell {
-            self.selection = .category(category: categoryCell.category)
+            self.selection = categoryCell.category.bookmark
         }
         if let quoteCell = sender as? QuoteCell {
-            self.selection = .quote(quote: quoteCell.quote)
+            self.selection = quoteCell.quote?.bookmark
         }
     }
 }

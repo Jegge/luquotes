@@ -22,20 +22,16 @@ class Library {
             .filter { !$0.1.isEmpty }
             .reduce(into: [:]) { $0[$1.0] = $1.1 }
 
-        // Reload the quote's message in the bookmarks to prevent having entries in the wrong language
-        // in the bookmark view
-        self.bookmarks = Set(UserDefaults.standard.bookmarks.map {
-            switch $0 {
-            case .category:
-                return $0
-            case .quote(quote: let quote):
-                if let translated = self.quote(at: quote.index, in: quote.category) {
-                    return .quote(quote: translated)
-                } else {
-                    return $0
-                }
-            }
-        })
+        self.bookmarks = UserDefaults.standard.bookmarks
+    }
+
+    func quote (at bookmark: Bookmark) -> Quote? {
+        switch bookmark {
+        case .category(let category):
+            return self.firstQuote(in: category)
+        case .quote(let category, let index):
+            return self.quote(at: index, in: category)
+        }
     }
 
     func quote (at index: Int, in category: Category) -> Quote? {
@@ -59,47 +55,47 @@ class Library {
         if let result = self.quote(at: quote.index - 1, in: quote.category) {
             return result
         }
-        if let category = quote.category.previous, let result = self.last(in: category) {
+        if let category = quote.category.previous, let result = self.lastQuote(in: category) {
             return result
         }
         return nil
     }
 
-    func first (in category: Category) -> Quote? {
+    func firstQuote (in category: Category) -> Quote? {
         return self.quote(at: 0, in: category)
     }
 
-    func last (in category: Category) -> Quote? {
+    func lastQuote (in category: Category) -> Quote? {
         if let count = self.quotes[category]?.count, let result = self.quote(at: count - 1, in: category) {
             return result
         }
         return nil
     }
 
-    func hasBookmark(for quote: Quote) -> Bool {
-        return self.bookmarks.contains(.quote(quote: quote))
-    }
-
-    func toggleBookmark(for quote: Quote) {
-        if self.bookmarks.contains(.quote(quote: quote)) {
-            self.bookmarks.remove(.quote(quote: quote))
-        } else {
-            self.bookmarks.insert(.quote(quote: quote))
+    func bookmarks (in targetCategory: Category) -> [Bookmark] {
+        return [.category(category: targetCategory)] + self.bookmarks.filter {
+            switch $0 {
+            case .category(category: let category):
+                return targetCategory == category
+            case .quote(category: let category, index: _):
+                return targetCategory == category
+            }
         }
     }
 
-    func removeBookmark(_ bookmark: Bookmark) {
-        self.bookmarks.remove(bookmark)
+    func contains (bookmark: Bookmark) -> Bool {
+        return self.bookmarks.contains(bookmark)
     }
 
-    func bookmarks(in category: Category) -> [Bookmark] {
-        return self.bookmarks.filter {
-            switch $0 {
-            case .quote(quote: let quote):
-                return quote.category == category
-            default:
-                return false
-            }
-        }.sorted(by: <)
+    func toggle (bookmark: Bookmark) {
+        if self.bookmarks.contains(bookmark) {
+            self.bookmarks.remove(bookmark)
+        } else {
+            self.bookmarks.insert(bookmark)
+        }
+    }
+
+    func remove (bookmark: Bookmark) {
+        self.bookmarks.remove(bookmark)
     }
 }

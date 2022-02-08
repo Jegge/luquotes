@@ -8,12 +8,11 @@
 import UIKit
 
 class QuoteCell: UITableViewCell {
-
     @IBOutlet var titleLabel: UILabel!
 
-    var quote: Quote = Quote(index: 0, category: .introduction, message: "Lorem ipsum") {
+    var quote: Quote? {
         didSet {
-            self.titleLabel.text = self.quote.message
+            self.titleLabel.text = self.quote?.message
         }
     }
 }

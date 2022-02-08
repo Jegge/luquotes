@@ -37,7 +37,7 @@ class QuotesViewController: UIPageViewController {
     }
 
     private func updateBookmarkButton (for quote: Quote) {
-        self.bookmarkBarButtonItem.image = self.library.hasBookmark(for: quote) ? UIImage(systemName: "bookmark.fill") : UIImage(systemName: "bookmark")
+        self.bookmarkBarButtonItem.image = self.library.contains(bookmark: quote.bookmark) ? UIImage(systemName: "bookmark.fill") : UIImage(systemName: "bookmark")
     }
 
     private func updateNavigationButtons (for quote: Quote) {
@@ -51,7 +51,7 @@ class QuotesViewController: UIPageViewController {
 
     @IBAction func bookmarkBarButtonItemPressed (_ button: UIBarButtonItem) {
         if let quote = (self.viewControllers?.first as? QuoteViewController)?.quote {
-            self.library.toggleBookmark(for: quote)
+            self.library.toggle(bookmark: quote.bookmark)
             self.updateBookmarkButton(for: quote)
         }
     }
@@ -61,9 +61,9 @@ class QuotesViewController: UIPageViewController {
             return
         }
 
-        if let category = current.category.previous, let previous = self.library.last(in: category) {
+        if let category = current.category.previous, let previous = self.library.lastQuote(in: category) {
             self.setCurrent(previous, direction: .reverse, animated: true)
-        } else if let previous = self.library.first(in: current.category), previous != current {
+        } else if let previous = self.library.firstQuote(in: current.category), previous != current {
             self.setCurrent(previous, direction: .reverse, animated: true)
         }
     }
@@ -73,25 +73,17 @@ class QuotesViewController: UIPageViewController {
             return
         }
 
-        if let category = current.category.next, let next = self.library.first(in: category) {
+        if let category = current.category.next, let next = self.library.firstQuote(in: category) {
             self.setCurrent(next, direction: .forward, animated: true)
-        } else if let next = self.library.last(in: current.category), next != current {
+        } else if let next = self.library.lastQuote(in: current.category), next != current {
             self.setCurrent(next, direction: .forward, animated: true)
         }
     }
 
     @IBAction func unwindSegue (_ segue: UIStoryboardSegue) {
-        if segue.identifier == "UnwindBookmarks", let source = segue.source as? BookmarksViewController {
-            switch source.selection {
-            case .category(category: let category):
-                if let quote = self.library.first(in: category) {
-                    self.setCurrent(quote, direction: .forward, animated: false)
-                }
-            case .quote(quote: let quote):
-                self.setCurrent(quote, direction: .forward, animated: false)
-            default:
-                break
-            }
+        if segue.identifier == "UnwindBookmarks", let source = segue.source as? BookmarksViewController, let bookmark = source.selection,
+            let quote = self.library.quote(at: bookmark) {
+            self.setCurrent(quote, direction: .forward, animated: false)
         }
     }
 

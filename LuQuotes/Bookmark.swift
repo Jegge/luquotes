@@ -9,18 +9,24 @@ import Foundation
 
 enum Bookmark: Hashable, Codable, Equatable, Comparable {
     case category(category: Category)
-    case quote(quote: Quote)
+    case quote(category: Category, index: Int)
 
     static func < (lhs: Bookmark, rhs: Bookmark) -> Bool {
         switch (lhs, rhs) {
         case (.category(category: let lCategory), .category(category: let rCategory)):
             return lCategory < rCategory
 
-        case (.quote(quote: let lQuote), .quote(quote: let rQuote)):
-            return lQuote < rQuote
+        case (.quote(category: let lCategory, index: let lIndex), .quote(category: let rCategory, index: let rIndex)):
+            if lCategory != rCategory {
+                return lCategory < rCategory
+            }
+            return lIndex < rIndex
+
+        case (.category, .quote):
+            return true
 
         default:
-            return true
+            return false
         }
     }
 }
