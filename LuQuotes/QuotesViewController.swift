@@ -40,8 +40,8 @@ class QuotesViewController: UIPageViewController {
     }
 
     private func updateNavigationButtons (for quote: Quote) {
-        self.nextCategoryBarButtonItem.isEnabled = quote.category != Category.allCases.last
-        self.previousCategoryBarButtonItem.isEnabled = quote.category != Category.allCases.first
+        self.nextCategoryBarButtonItem.isEnabled = self.library.quote(after: quote) != nil
+        self.previousCategoryBarButtonItem.isEnabled = self.library.quote(before: quote) != nil
     }
 
     @IBAction func openForumBarButtonItemPressed (_ button: UIBarButtonItem) {
@@ -58,25 +58,27 @@ class QuotesViewController: UIPageViewController {
     }
 
     @IBAction func previousCategoryBarButtonItemPressed (_ button: UIBarButtonItem) {
-        guard
-            let current = (self.viewControllers?.first as? QuoteViewController)?.quote,
-            let category = current.category.previous,
-            let previous = self.library.last(in: category)
-        else {
+        guard let current = (self.viewControllers?.first as? QuoteViewController)?.quote else {
             return
         }
-        self.setCurrent(previous, direction: .reverse, animated: true)
+
+        if let category = current.category.previous, let previous = self.library.last(in: category) {
+            self.setCurrent(previous, direction: .reverse, animated: true)
+        } else if let previous = self.library.first(in: current.category), previous != current {
+            self.setCurrent(previous, direction: .reverse, animated: true)
+        }
     }
 
     @IBAction func nextCategoryBarButtonItemPressed (_ button: UIBarButtonItem) {
-        guard
-            let current = (self.viewControllers?.first as? QuoteViewController)?.quote,
-            let category = current.category.next,
-            let next = self.library.first(in: category)
-        else {
+        guard let current = (self.viewControllers?.first as? QuoteViewController)?.quote else {
             return
         }
-        self.setCurrent(next, direction: .forward, animated: true)
+
+        if let category = current.category.next, let next = self.library.first(in: category) {
+            self.setCurrent(next, direction: .forward, animated: true)
+        } else if let next = self.library.last(in: current.category), next != current {
+            self.setCurrent(next, direction: .forward, animated: true)
+        }
     }
 
     @IBAction func unwindSegue (_ segue: UIStoryboardSegue) {
