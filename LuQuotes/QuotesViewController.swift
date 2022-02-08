@@ -45,9 +45,7 @@ class QuotesViewController: UIPageViewController {
     }
 
     @IBAction func openForumBarButtonItemPressed (_ button: UIBarButtonItem) {
-        if let url = URL(string: "https://www.liberationunleashed.com/nation/") {
-            UIApplication.shared.open(url)
-        }
+        UIApplication.shared.open(UserDefaults.standard.forumUrl)
     }
 
     @IBAction func bookmarkBarButtonItemPressed (_ button: UIBarButtonItem) {

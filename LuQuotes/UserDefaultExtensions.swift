@@ -28,6 +28,16 @@ extension UserDefaults {
         static let currentCategory = "CurrentCategory"
         static let currentIndex = "CurrentIndex"
         static let bookmarks = "Bookmarks"
+        static let forumUrl = "forumUrl"
+    }
+
+    func register () {
+        self.register(defaults: [
+            UserDefault.currentCategory: Category.introduction.rawValue,
+            UserDefault.currentIndex: 0,
+            UserDefault.bookmarks: Data(),
+            UserDefault.forumUrl: URL(string: "https://www.liberationunleashed.com/nation/")!
+        ])
     }
 
     var currentCategory: Category {
@@ -55,5 +65,9 @@ extension UserDefaults {
         set {
             self.set(encodable: newValue, forKey: UserDefault.bookmarks)
         }
+    }
+
+    var forumUrl: URL {
+        return self.url(forKey: UserDefault.forumUrl)!
     }
 }
