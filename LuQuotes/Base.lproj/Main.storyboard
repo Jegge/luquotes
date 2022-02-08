@@ -90,7 +90,11 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="YCx-Sa-ez1">
-                        <barButtonItem key="leftBarButtonItem" image="gear" catalog="system" id="Ycm-1l-VjX"/>
+                        <barButtonItem key="leftBarButtonItem" image="person.icloud" catalog="system" id="Ycm-1l-VjX">
+                            <connections>
+                                <action selector="openForumBarButtonItemPressed:" destination="fAO-gy-ylq" id="5zX-E9-hd1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="bookmark" catalog="system" id="Gno-0i-lf1">
                             <connections>
                                 <action selector="bookmarkBarButtonItemPressed:" destination="fAO-gy-ylq" id="2B5-0N-4WI"/>
@@ -231,8 +235,8 @@
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="forward.end" catalog="system" width="128" height="120"/>
-        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="logo" width="399" height="399"/>
+        <image name="person.icloud" catalog="system" width="128" height="88"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -44,6 +44,12 @@ class QuotesViewController: UIPageViewController {
         self.previousCategoryBarButtonItem.isEnabled = quote.category != Category.allCases.first
     }
 
+    @IBAction func openForumBarButtonItemPressed (_ button: UIBarButtonItem) {
+        if let url = URL(string: "https://www.liberationunleashed.com/nation/") {
+            UIApplication.shared.open(url)
+        }
+    }
+
     @IBAction func bookmarkBarButtonItemPressed (_ button: UIBarButtonItem) {
         if let quote = (self.viewControllers?.first as? QuoteViewController)?.quote {
             self.library.toggleBookmark(for: quote)
