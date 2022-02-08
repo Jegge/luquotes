@@ -19,6 +19,7 @@ class QuotesViewController: UIPageViewController {
         super.viewDidLoad()
         self.dataSource = self
         self.delegate = self
+        self.view.backgroundColor = .systemBackground
 
         if let current = self.library.quote(at: UserDefaults.standard.currentIndex, in: UserDefaults.standard.currentCategory) {
             self.setCurrent(current, direction: .forward, animated: false)
