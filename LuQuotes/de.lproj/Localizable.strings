@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  LuQuotes
+
+  Created by Sebastian Boettcher on 07.02.22.
+  
+*/
+
+"Category_introduction" = "Einführung";
+"Category_expectations" = "Erwartungen";
+"Category_fear" = "Angst";
+"Category_directExperience" = "Direkte Erfahrung";
+"Category_labelingAndLanguage" = "Bezeichnung & Sprache";
+"Category_story" = "Geschichten";
+"Category_exercises" = "Übungen";
+"Category_looking" = "Sehen / Beobachten";
+"Category_gate" = "Das Tor";
+"Category_afterGate" = "Nach dem Tor";
+

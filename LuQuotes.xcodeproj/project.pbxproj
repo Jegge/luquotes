@@ -15,18 +15,7 @@
 		D25EABC727B14D79000CBEA7 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABC627B14D79000CBEA7 /* QuoteViewController.swift */; };
 		D25EABC927B1509A000CBEA7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABC827B1509A000CBEA7 /* Category.swift */; };
 		D25EABCB27B15D98000CBEA7 /* LocalizedStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABCA27B15D98000CBEA7 /* LocalizedStringConvertible.swift */; };
-		D25EABCD27B15DC1000CBEA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25EABCC27B15DC1000CBEA7 /* Localizable.strings */; };
-		D25EABCF27B1637F000CBEA7 /* Quotes.introduction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABCE27B1637F000CBEA7 /* Quotes.introduction.txt */; };
-		D25EABD127B1639B000CBEA7 /* Quotes.expectations.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABD027B1639B000CBEA7 /* Quotes.expectations.txt */; };
 		D25EABD627B164CA000CBEA7 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABD527B164CA000CBEA7 /* BundleExtensions.swift */; };
-		D25EABD827B16BCC000CBEA7 /* Quotes.fear.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABD727B16BCC000CBEA7 /* Quotes.fear.txt */; };
-		D25EABDA27B16C83000CBEA7 /* Quotes.directExperience.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABD927B16C83000CBEA7 /* Quotes.directExperience.txt */; };
-		D25EABDC27B16D6D000CBEA7 /* Quotes.labelingAndLanguage.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABDB27B16D6D000CBEA7 /* Quotes.labelingAndLanguage.txt */; };
-		D25EABDE27B16EBB000CBEA7 /* Quotes.story.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABDD27B16EBB000CBEA7 /* Quotes.story.txt */; };
-		D25EABE027B16F6C000CBEA7 /* Quotes.exercises.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABDF27B16F6C000CBEA7 /* Quotes.exercises.txt */; };
-		D25EABE227B170EF000CBEA7 /* Quotes.looking.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABE127B170EF000CBEA7 /* Quotes.looking.txt */; };
-		D25EABE427B1720D000CBEA7 /* Quotes.gate.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABE327B1720D000CBEA7 /* Quotes.gate.txt */; };
-		D25EABE627B1725E000CBEA7 /* Quotes.afterGate.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EABE527B1725E000CBEA7 /* Quotes.afterGate.txt */; };
 		D25EABE827B1751A000CBEA7 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABE727B1751A000CBEA7 /* Library.swift */; };
 		D25EABEA27B1838B000CBEA7 /* UserDefaultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABE927B1838B000CBEA7 /* UserDefaultExtensions.swift */; };
 		D25EABEE27B1AA91000CBEA7 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABED27B1AA91000CBEA7 /* BookmarksViewController.swift */; };
@@ -38,6 +27,17 @@
 		D25EABFD27B24B85000CBEA7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D25EABFC27B24B85000CBEA7 /* Settings.bundle */; };
 		D25EAC0127B251D9000CBEA7 /* AppIcon.svg in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0027B251D9000CBEA7 /* AppIcon.svg */; };
 		D25EAC0327B253BF000CBEA7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */; };
+		D25EAC0527B25C08000CBEA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0727B25C08000CBEA7 /* Localizable.strings */; };
+		D25EAC0927B25C5C000CBEA7 /* Quotes.introduction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0B27B25C5C000CBEA7 /* Quotes.introduction.txt */; };
+		D25EAC0C27B25C62000CBEA7 /* Quotes.expectations.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0E27B25C62000CBEA7 /* Quotes.expectations.txt */; };
+		D25EAC0F27B25C6B000CBEA7 /* Quotes.fear.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC1127B25C6B000CBEA7 /* Quotes.fear.txt */; };
+		D25EAC1227B25C70000CBEA7 /* Quotes.directExperience.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC1427B25C70000CBEA7 /* Quotes.directExperience.txt */; };
+		D25EAC1527B25C77000CBEA7 /* Quotes.labelingAndLanguage.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC1727B25C77000CBEA7 /* Quotes.labelingAndLanguage.txt */; };
+		D25EAC1827B25C7C000CBEA7 /* Quotes.story.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC1A27B25C7D000CBEA7 /* Quotes.story.txt */; };
+		D25EAC1B27B25C83000CBEA7 /* Quotes.exercises.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC1D27B25C83000CBEA7 /* Quotes.exercises.txt */; };
+		D25EAC1E27B25C88000CBEA7 /* Quotes.looking.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC2027B25C88000CBEA7 /* Quotes.looking.txt */; };
+		D25EAC2127B25C8E000CBEA7 /* Quotes.gate.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC2327B25C8E000CBEA7 /* Quotes.gate.txt */; };
+		D25EAC2427B25C94000CBEA7 /* Quotes.afterGate.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC2627B25C94000CBEA7 /* Quotes.afterGate.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,18 +51,7 @@
 		D25EABC627B14D79000CBEA7 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		D25EABC827B1509A000CBEA7 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D25EABCA27B15D98000CBEA7 /* LocalizedStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedStringConvertible.swift; sourceTree = "<group>"; };
-		D25EABCC27B15DC1000CBEA7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		D25EABCE27B1637F000CBEA7 /* Quotes.introduction.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.introduction.txt; sourceTree = "<group>"; };
-		D25EABD027B1639B000CBEA7 /* Quotes.expectations.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.expectations.txt; sourceTree = "<group>"; };
 		D25EABD527B164CA000CBEA7 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
-		D25EABD727B16BCC000CBEA7 /* Quotes.fear.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.fear.txt; sourceTree = "<group>"; };
-		D25EABD927B16C83000CBEA7 /* Quotes.directExperience.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.directExperience.txt; sourceTree = "<group>"; };
-		D25EABDB27B16D6D000CBEA7 /* Quotes.labelingAndLanguage.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.labelingAndLanguage.txt; sourceTree = "<group>"; };
-		D25EABDD27B16EBB000CBEA7 /* Quotes.story.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.story.txt; sourceTree = "<group>"; };
-		D25EABDF27B16F6C000CBEA7 /* Quotes.exercises.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.exercises.txt; sourceTree = "<group>"; };
-		D25EABE127B170EF000CBEA7 /* Quotes.looking.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.looking.txt; sourceTree = "<group>"; };
-		D25EABE327B1720D000CBEA7 /* Quotes.gate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.gate.txt; sourceTree = "<group>"; };
-		D25EABE527B1725E000CBEA7 /* Quotes.afterGate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Quotes.afterGate.txt; sourceTree = "<group>"; };
 		D25EABE727B1751A000CBEA7 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		D25EABE927B1838B000CBEA7 /* UserDefaultExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtensions.swift; sourceTree = "<group>"; };
 		D25EABEC27B1A1D5000CBEA7 /* Logo.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Logo.svg; sourceTree = "<group>"; };
@@ -75,6 +64,28 @@
 		D25EABFC27B24B85000CBEA7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D25EAC0027B251D9000CBEA7 /* AppIcon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = AppIcon.svg; sourceTree = "<group>"; };
 		D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D25EAC0627B25C08000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D25EAC0827B25C15000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D25EAC0A27B25C5C000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.introduction.txt; sourceTree = "<group>"; };
+		D25EAC0D27B25C62000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.expectations.txt; sourceTree = "<group>"; };
+		D25EAC1027B25C6B000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.fear.txt; sourceTree = "<group>"; };
+		D25EAC1327B25C70000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.directExperience.txt; sourceTree = "<group>"; };
+		D25EAC1627B25C77000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.labelingAndLanguage.txt; sourceTree = "<group>"; };
+		D25EAC1927B25C7D000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.story.txt; sourceTree = "<group>"; };
+		D25EAC1C27B25C83000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.exercises.txt; sourceTree = "<group>"; };
+		D25EAC1F27B25C88000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.looking.txt; sourceTree = "<group>"; };
+		D25EAC2227B25C8E000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.gate.txt; sourceTree = "<group>"; };
+		D25EAC2527B25C94000CBEA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Quotes.afterGate.txt; sourceTree = "<group>"; };
+		D25EAC2727B25CA9000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.introduction.txt; sourceTree = "<group>"; };
+		D25EAC2827B25CAE000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.expectations.txt; sourceTree = "<group>"; };
+		D25EAC2927B25CB1000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.fear.txt; sourceTree = "<group>"; };
+		D25EAC2A27B25CB4000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.directExperience.txt; sourceTree = "<group>"; };
+		D25EAC2B27B25CB8000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.labelingAndLanguage.txt; sourceTree = "<group>"; };
+		D25EAC2C27B25CBB000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.story.txt; sourceTree = "<group>"; };
+		D25EAC2D27B25CBE000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.exercises.txt; sourceTree = "<group>"; };
+		D25EAC2E27B25CC2000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.looking.txt; sourceTree = "<group>"; };
+		D25EAC2F27B25CC5000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.gate.txt; sourceTree = "<group>"; };
+		D25EAC3027B25CC8000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.afterGate.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +136,7 @@
 			children = (
 				D25EABFC27B24B85000CBEA7 /* Settings.bundle */,
 				D25EABBB27B14D4A000CBEA7 /* Assets.xcassets */,
-				D25EABCC27B15DC1000CBEA7 /* Localizable.strings */,
+				D25EAC0727B25C08000CBEA7 /* Localizable.strings */,
 				D25EABB827B14D49000CBEA7 /* Main.storyboard */,
 				D25EABBD27B14D4A000CBEA7 /* LaunchScreen.storyboard */,
 				D25EABEB27B19F6A000CBEA7 /* Quotes */,
@@ -160,16 +171,16 @@
 		D25EABEB27B19F6A000CBEA7 /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
-				D25EABCE27B1637F000CBEA7 /* Quotes.introduction.txt */,
-				D25EABD027B1639B000CBEA7 /* Quotes.expectations.txt */,
-				D25EABD727B16BCC000CBEA7 /* Quotes.fear.txt */,
-				D25EABD927B16C83000CBEA7 /* Quotes.directExperience.txt */,
-				D25EABDB27B16D6D000CBEA7 /* Quotes.labelingAndLanguage.txt */,
-				D25EABDD27B16EBB000CBEA7 /* Quotes.story.txt */,
-				D25EABDF27B16F6C000CBEA7 /* Quotes.exercises.txt */,
-				D25EABE127B170EF000CBEA7 /* Quotes.looking.txt */,
-				D25EABE327B1720D000CBEA7 /* Quotes.gate.txt */,
-				D25EABE527B1725E000CBEA7 /* Quotes.afterGate.txt */,
+				D25EAC0B27B25C5C000CBEA7 /* Quotes.introduction.txt */,
+				D25EAC0E27B25C62000CBEA7 /* Quotes.expectations.txt */,
+				D25EAC1127B25C6B000CBEA7 /* Quotes.fear.txt */,
+				D25EAC1427B25C70000CBEA7 /* Quotes.directExperience.txt */,
+				D25EAC1727B25C77000CBEA7 /* Quotes.labelingAndLanguage.txt */,
+				D25EAC1A27B25C7D000CBEA7 /* Quotes.story.txt */,
+				D25EAC1D27B25C83000CBEA7 /* Quotes.exercises.txt */,
+				D25EAC2027B25C88000CBEA7 /* Quotes.looking.txt */,
+				D25EAC2327B25C8E000CBEA7 /* Quotes.gate.txt */,
+				D25EAC2627B25C94000CBEA7 /* Quotes.afterGate.txt */,
 			);
 			name = Quotes;
 			sourceTree = "<group>";
@@ -236,6 +247,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = D25EABA627B14D49000CBEA7;
 			productRefGroup = D25EABB027B14D49000CBEA7 /* Products */;
@@ -253,22 +265,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				D25EAC0327B253BF000CBEA7 /* .swiftlint.yml in Resources */,
-				D25EABE427B1720D000CBEA7 /* Quotes.gate.txt in Resources */,
-				D25EABD827B16BCC000CBEA7 /* Quotes.fear.txt in Resources */,
+				D25EAC2127B25C8E000CBEA7 /* Quotes.gate.txt in Resources */,
+				D25EAC0F27B25C6B000CBEA7 /* Quotes.fear.txt in Resources */,
 				D25EABBF27B14D4A000CBEA7 /* LaunchScreen.storyboard in Resources */,
-				D25EABCF27B1637F000CBEA7 /* Quotes.introduction.txt in Resources */,
-				D25EABDC27B16D6D000CBEA7 /* Quotes.labelingAndLanguage.txt in Resources */,
-				D25EABDA27B16C83000CBEA7 /* Quotes.directExperience.txt in Resources */,
-				D25EABCD27B15DC1000CBEA7 /* Localizable.strings in Resources */,
-				D25EABD127B1639B000CBEA7 /* Quotes.expectations.txt in Resources */,
+				D25EAC0927B25C5C000CBEA7 /* Quotes.introduction.txt in Resources */,
+				D25EAC1527B25C77000CBEA7 /* Quotes.labelingAndLanguage.txt in Resources */,
+				D25EAC1227B25C70000CBEA7 /* Quotes.directExperience.txt in Resources */,
+				D25EAC0527B25C08000CBEA7 /* Localizable.strings in Resources */,
+				D25EAC0C27B25C62000CBEA7 /* Quotes.expectations.txt in Resources */,
 				D25EABFD27B24B85000CBEA7 /* Settings.bundle in Resources */,
 				D25EABBC27B14D4A000CBEA7 /* Assets.xcassets in Resources */,
-				D25EABDE27B16EBB000CBEA7 /* Quotes.story.txt in Resources */,
+				D25EAC1827B25C7C000CBEA7 /* Quotes.story.txt in Resources */,
 				D25EABFB27B1E23B000CBEA7 /* .gitignore in Resources */,
 				D25EAC0127B251D9000CBEA7 /* AppIcon.svg in Resources */,
-				D25EABE627B1725E000CBEA7 /* Quotes.afterGate.txt in Resources */,
-				D25EABE027B16F6C000CBEA7 /* Quotes.exercises.txt in Resources */,
-				D25EABE227B170EF000CBEA7 /* Quotes.looking.txt in Resources */,
+				D25EAC2427B25C94000CBEA7 /* Quotes.afterGate.txt in Resources */,
+				D25EAC1B27B25C83000CBEA7 /* Quotes.exercises.txt in Resources */,
+				D25EAC1E27B25C88000CBEA7 /* Quotes.looking.txt in Resources */,
 				D25EABBA27B14D49000CBEA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +364,105 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		D25EAC0727B25C08000CBEA7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC0627B25C08000CBEA7 /* en */,
+				D25EAC0827B25C15000CBEA7 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D25EAC0B27B25C5C000CBEA7 /* Quotes.introduction.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC0A27B25C5C000CBEA7 /* en */,
+				D25EAC2727B25CA9000CBEA7 /* de */,
+			);
+			name = Quotes.introduction.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC0E27B25C62000CBEA7 /* Quotes.expectations.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC0D27B25C62000CBEA7 /* en */,
+				D25EAC2827B25CAE000CBEA7 /* de */,
+			);
+			name = Quotes.expectations.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC1127B25C6B000CBEA7 /* Quotes.fear.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC1027B25C6B000CBEA7 /* en */,
+				D25EAC2927B25CB1000CBEA7 /* de */,
+			);
+			name = Quotes.fear.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC1427B25C70000CBEA7 /* Quotes.directExperience.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC1327B25C70000CBEA7 /* en */,
+				D25EAC2A27B25CB4000CBEA7 /* de */,
+			);
+			name = Quotes.directExperience.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC1727B25C77000CBEA7 /* Quotes.labelingAndLanguage.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC1627B25C77000CBEA7 /* en */,
+				D25EAC2B27B25CB8000CBEA7 /* de */,
+			);
+			name = Quotes.labelingAndLanguage.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC1A27B25C7D000CBEA7 /* Quotes.story.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC1927B25C7D000CBEA7 /* en */,
+				D25EAC2C27B25CBB000CBEA7 /* de */,
+			);
+			name = Quotes.story.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC1D27B25C83000CBEA7 /* Quotes.exercises.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC1C27B25C83000CBEA7 /* en */,
+				D25EAC2D27B25CBE000CBEA7 /* de */,
+			);
+			name = Quotes.exercises.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC2027B25C88000CBEA7 /* Quotes.looking.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC1F27B25C88000CBEA7 /* en */,
+				D25EAC2E27B25CC2000CBEA7 /* de */,
+			);
+			name = Quotes.looking.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC2327B25C8E000CBEA7 /* Quotes.gate.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC2227B25C8E000CBEA7 /* en */,
+				D25EAC2F27B25CC5000CBEA7 /* de */,
+			);
+			name = Quotes.gate.txt;
+			sourceTree = "<group>";
+		};
+		D25EAC2627B25C94000CBEA7 /* Quotes.afterGate.txt */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D25EAC2527B25C94000CBEA7 /* en */,
+				D25EAC3027B25CC8000CBEA7 /* de */,
+			);
+			name = Quotes.afterGate.txt;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -359,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -420,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
