@@ -23,10 +23,7 @@
 		D25EABF327B1BB01000CBEA7 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABF227B1BB01000CBEA7 /* Bookmark.swift */; };
 		D25EABF527B1BB6B000CBEA7 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABF427B1BB6B000CBEA7 /* Quote.swift */; };
 		D25EABF727B1C259000CBEA7 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EABF627B1C259000CBEA7 /* QuoteCell.swift */; };
-		D25EABFB27B1E23B000CBEA7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D25EABFA27B1E23B000CBEA7 /* .gitignore */; };
 		D25EABFD27B24B85000CBEA7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D25EABFC27B24B85000CBEA7 /* Settings.bundle */; };
-		D25EAC0127B251D9000CBEA7 /* AppIcon.svg in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0027B251D9000CBEA7 /* AppIcon.svg */; };
-		D25EAC0327B253BF000CBEA7 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */; };
 		D25EAC0527B25C08000CBEA7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0727B25C08000CBEA7 /* Localizable.strings */; };
 		D25EAC0927B25C5C000CBEA7 /* Quotes.introduction.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0B27B25C5C000CBEA7 /* Quotes.introduction.txt */; };
 		D25EAC0C27B25C62000CBEA7 /* Quotes.expectations.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC0E27B25C62000CBEA7 /* Quotes.expectations.txt */; };
@@ -264,7 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D25EAC0327B253BF000CBEA7 /* .swiftlint.yml in Resources */,
 				D25EAC2127B25C8E000CBEA7 /* Quotes.gate.txt in Resources */,
 				D25EAC0F27B25C6B000CBEA7 /* Quotes.fear.txt in Resources */,
 				D25EABBF27B14D4A000CBEA7 /* LaunchScreen.storyboard in Resources */,
@@ -276,8 +272,6 @@
 				D25EABFD27B24B85000CBEA7 /* Settings.bundle in Resources */,
 				D25EABBC27B14D4A000CBEA7 /* Assets.xcassets in Resources */,
 				D25EAC1827B25C7C000CBEA7 /* Quotes.story.txt in Resources */,
-				D25EABFB27B1E23B000CBEA7 /* .gitignore in Resources */,
-				D25EAC0127B251D9000CBEA7 /* AppIcon.svg in Resources */,
 				D25EAC2427B25C94000CBEA7 /* Quotes.afterGate.txt in Resources */,
 				D25EAC1B27B25C83000CBEA7 /* Quotes.exercises.txt in Resources */,
 				D25EAC1E27B25C88000CBEA7 /* Quotes.looking.txt in Resources */,
