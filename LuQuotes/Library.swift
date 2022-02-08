@@ -8,9 +8,8 @@
 import Foundation
 
 class Library {
-
-    let quotes: [Category: [String]]
-    var bookmarks: Set<Bookmark> = [] {
+    private let quotes: [Category: [String]]
+    private var bookmarks: Set<Bookmark> = [] {
         didSet {
             UserDefaults.standard.bookmarks = self.bookmarks
         }
@@ -45,7 +44,7 @@ class Library {
         if let result = self.quote(at: quote.index + 1, in: quote.category) {
             return result
         }
-        if let category = quote.category.next, let result = self.first(in: category) {
+        if let category = quote.category.next, let result = self.firstQuote(in: category) {
             return result
         }
         return nil

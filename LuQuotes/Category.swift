@@ -8,7 +8,6 @@
 import UIKit
 
 enum Category: Int, LocalizedStringConvertible, CaseIterable, Codable, Equatable, Hashable, Comparable {
-
     case introduction
     case expectations
     case fear

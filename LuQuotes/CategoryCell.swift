@@ -8,7 +8,6 @@
 import UIKit
 
 class CategoryCell: UITableViewCell {
-
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
 

@@ -8,11 +8,10 @@
 import UIKit
 
 class BookmarksViewController: UITableViewController {
-
     private var entries: [Bookmark] = []
 
     var library: Library!
-    var selection: Bookmark?
+    private (set) var selection: Bookmark?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,6 @@ class BookmarksViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
         switch self.entries[indexPath.row] {
         case .category(let category):
             let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)

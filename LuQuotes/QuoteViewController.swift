@@ -8,7 +8,6 @@
 import UIKit
 
 class QuoteViewController: UIViewController {
-
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var categoryImage: UIImageView!
     @IBOutlet var contentTextView: UITextView!

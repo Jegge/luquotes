@@ -8,7 +8,6 @@
 import UIKit
 
 class QuotesViewController: UIPageViewController {
-
     @IBOutlet var bookmarkBarButtonItem: UIBarButtonItem!
     @IBOutlet var previousCategoryBarButtonItem: UIBarButtonItem!
     @IBOutlet var nextCategoryBarButtonItem: UIBarButtonItem!
@@ -116,7 +115,6 @@ extension QuotesViewController: UIPageViewControllerDelegate {
 }
 
 extension QuotesViewController: UIPageViewControllerDataSource {
-
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard
             let current = (viewController as? QuoteViewController)?.quote,

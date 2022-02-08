@@ -8,7 +8,7 @@
 import Foundation
 
 extension Bundle {
-    func quotes(in category: Category) -> [String] {
+    func quotes (in category: Category) -> [String] {
         guard let url = self.url(forResource: "Quotes.\(String(describing: category))", withExtension: "txt") else {
             return []
         }
