@@ -5,7 +5,6 @@
 //  Created by Sebastian Boettcher on 07.02.22.
 //
 
-
 import UIKit
 
 class QuoteCell: UITableViewCell {

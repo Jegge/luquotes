@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class QuotesViewController: UIPageViewController {
 
     @IBOutlet var bookmarkBarButtonItem: UIBarButtonItem!
@@ -77,8 +75,7 @@ class QuotesViewController: UIPageViewController {
 
     @IBAction func unwindSegue (_ segue: UIStoryboardSegue) {
         if segue.identifier == "UnwindBookmarks", let source = segue.source as? BookmarksViewController {
-            switch source.selection
-            {
+            switch source.selection {
             case .category(category: let category):
                 if let quote = self.library.first(in: category) {
                     self.setCurrent(quote, direction: .forward, animated: false)
@@ -88,7 +85,7 @@ class QuotesViewController: UIPageViewController {
             default:
                 break
             }
-        }        
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

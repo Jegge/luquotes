@@ -63,7 +63,6 @@ class Library {
         return nil
     }
 
-
     func hasBookmark(for quote: Quote) -> Bool {
         return self.bookmarks.contains(.quote(quote: quote))
     }
@@ -91,4 +90,3 @@ class Library {
         }.sorted(by: <)
     }
 }
-

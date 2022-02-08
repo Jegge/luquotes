@@ -20,7 +20,6 @@ enum Category: Int, LocalizedStringConvertible, CaseIterable, Codable, Equatable
     case gate
     case afterGate
 
-
     var color: UIColor {
         return UIColor(named: "\(String(describing: self))Color") ?? .black
     }
@@ -36,5 +35,4 @@ enum Category: Int, LocalizedStringConvertible, CaseIterable, Codable, Equatable
     static func < (lhs: Category, rhs: Category) -> Bool {
         return lhs.rawValue < rhs.rawValue
     }
-
 }
