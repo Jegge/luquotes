@@ -83,6 +83,8 @@
 		D25EAC2E27B25CC2000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.looking.txt; sourceTree = "<group>"; };
 		D25EAC2F27B25CC5000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.gate.txt; sourceTree = "<group>"; };
 		D25EAC3027B25CC8000CBEA7 /* de */ = {isa = PBXFileReference; lastKnownFileType = text; name = de; path = de.lproj/Quotes.afterGate.txt; sourceTree = "<group>"; };
+		D25EAC7F27B55DAF000CBEA7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D25EAC8027B566B9000CBEA7 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,8 @@
 		D25EABA627B14D49000CBEA7 = {
 			isa = PBXGroup;
 			children = (
+				D25EAC8027B566B9000CBEA7 /* LICENSE.md */,
+				D25EAC7F27B55DAF000CBEA7 /* README.md */,
 				D25EAC0227B253BF000CBEA7 /* .swiftlint.yml */,
 				D25EABFA27B1E23B000CBEA7 /* .gitignore */,
 				D25EAC0427B253C9000CBEA7 /* Assets */,
