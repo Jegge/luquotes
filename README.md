@@ -4,7 +4,7 @@ This is a conversion of the [original quotes app](https://apps.apple.com/app/id9
 
 Currently, only iDevices with iOS >= 13.6 are supported, older devices should use the original app.
 
-
+You can get the latest release from the [Apple AppStore](https://apps.apple.com/app/id1609056053).
 
 
 
