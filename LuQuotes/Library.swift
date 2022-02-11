@@ -30,8 +30,9 @@ class Library {
 
     private func indexQuotes () {
         let searchableItems = self.quotes.keys
-            .flatMap { category in self.quotes[category]!.enumerated().map { (category, $0.offset, $0.element) } }
+            .flatMap { category in self.quotes[category]!.enumerated().map { (category, $0.offset, (try? $0.element.strippedHtmlTags()) ?? "") } }
             .map { (category: Category, index: Int, message: String) -> CSSearchableItem in
+
                 let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeData as String)
                 attributeSet.title = message
                 attributeSet.containerIdentifier = "\(category.rawValue)"
