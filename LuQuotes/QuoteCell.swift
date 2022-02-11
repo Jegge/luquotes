@@ -12,7 +12,7 @@ class QuoteCell: UITableViewCell {
 
     var quote: Quote? {
         didSet {
-            self.titleLabel.text = self.quote?.message
+            self.titleLabel.text = NSAttributedString(html: self.quote?.message ?? "")?.rawString
         }
     }
 }

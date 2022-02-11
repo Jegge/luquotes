@@ -21,16 +21,14 @@ class QuoteViewController: UIViewController {
         self.categoryLabel.textColor = self.quote.category.color
         self.categoryImage.image = UIImage(named: "logo")?.withTintColor(self.quote.category.color)
 
-        let paragraph = NSMutableParagraphStyle()
-        paragraph.hyphenationFactor = 0.8
-        paragraph.alignment = .justified
+        // set the default style to justified, can be overridden in the quote
+        let message = self.quote.message.hasPrefix("<div")
+            ? self.quote.message
+            : "<div style=\"text-align: justify\">" + self.quote.message + "</div>"
 
-        let attributes: [NSAttributedString.Key: Any] = [
-            .paragraphStyle: paragraph,
-            .font: self.contentTextView.font!,
-            .foregroundColor: self.contentTextView.textColor!
-        ]
-
-        self.contentTextView.attributedText = NSAttributedString(string: self.quote.message, attributes: attributes)
+        self.contentTextView.attributedText = (NSAttributedString(html: message) ?? NSAttributedString(string: ""))
+            .setting(textColor: self.contentTextView.textColor!, backgroundColor: self.contentTextView.backgroundColor!)
+            .setting(hyphenationFactor: 0.8)
+            .setting(font: self.contentTextView.font!)
     }
 }
