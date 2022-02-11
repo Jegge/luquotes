@@ -12,10 +12,12 @@ class QuotesViewController: UIPageViewController {
     @IBOutlet var previousCategoryBarButtonItem: UIBarButtonItem!
     @IBOutlet var nextCategoryBarButtonItem: UIBarButtonItem!
 
-    private var library: Library = Library()
+    private var library: Library!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.library = Library()
         self.dataSource = self
         self.delegate = self
         self.view.backgroundColor = .systemBackground
@@ -25,7 +27,13 @@ class QuotesViewController: UIPageViewController {
         }
     }
 
-    private func setCurrent(_ current: Quote, direction: UIPageViewController.NavigationDirection, animated: Bool) {
+    func setCurrent (at index: Int, in category: Category) {
+        if let quote = self.library.quote(at: index, in: category) {
+            self.setCurrent(quote, direction: .forward, animated: false)
+        }
+    }
+
+    func setCurrent (_ current: Quote, direction: UIPageViewController.NavigationDirection, animated: Bool) {
         if let viewController = self.quoteViewController(for: current) {
             UserDefaults.standard.currentIndex = current.index
             UserDefaults.standard.currentCategory = current.category

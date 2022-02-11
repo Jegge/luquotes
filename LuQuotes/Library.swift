@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CoreSpotlight
+import MobileCoreServices
 
 class Library {
     private let quotes: [Category: [String]]
@@ -22,6 +24,27 @@ class Library {
             .reduce(into: [:]) { $0[$1.0] = $1.1 }
 
         self.bookmarks = UserDefaults.standard.bookmarks
+
+        self.indexQuotes()
+    }
+
+    private func indexQuotes () {
+        let searchableItems = self.quotes.keys
+            .flatMap { category in self.quotes[category]!.enumerated().map { (category, $0.offset, $0.element) } }
+            .map { (category: Category, index: Int, message: String) -> CSSearchableItem in
+                let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeData as String)
+                attributeSet.title = message
+                attributeSet.containerIdentifier = "\(category.rawValue)"
+                attributeSet.containerOrder = category.rawValue as NSNumber
+                attributeSet.containerDisplayName =  category.localizedDescription
+                attributeSet.contentDescription = message
+                attributeSet.keywords = [ "lu", "quotes", "liberation", "unleashed", Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String ?? "Quotes"]
+                return CSSearchableItem(uniqueIdentifier: "\(category.rawValue)-\(index)",
+                                            domainIdentifier: "com.realvirtuality.LuQuotes",
+                                            attributeSet: attributeSet)
+            }
+
+        CSSearchableIndex().indexSearchableItems(searchableItems, completionHandler: nil)
     }
 
     func quote (at bookmark: Bookmark) -> Quote? {

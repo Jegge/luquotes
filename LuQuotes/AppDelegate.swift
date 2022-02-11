@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreSpotlight
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,5 +20,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 
         return true
+    }
+
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        if userActivity.activityType != CSSearchableItemActionType {
+            return false
+        }
+
+        guard
+            let path = (userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String)?.components(separatedBy: "-"),
+            path.count == 2,
+            let category = Category(rawValue: Int(path[0]) ?? -1),
+            let index = Int(path[1]),
+            let navigationController = self.window?.rootViewController as? UINavigationController
+        else {
+            return false
+        }
+
+        navigationController.popToRootViewController(animated: false)
+        if let quotesViewController = navigationController.visibleViewController as? QuotesViewController {
+            quotesViewController.setCurrent(at: index, in: category)
+            return true
+        }
+
+        return false
     }
 }
