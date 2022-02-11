@@ -36,6 +36,7 @@
 		D25EAC2127B25C8E000CBEA7 /* Quotes.gate.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC2327B25C8E000CBEA7 /* Quotes.gate.txt */; };
 		D25EAC2427B25C94000CBEA7 /* Quotes.afterGate.txt in Resources */ = {isa = PBXBuildFile; fileRef = D25EAC2627B25C94000CBEA7 /* Quotes.afterGate.txt */; };
 		D25EAC8427B66A6C000CBEA7 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25EAC8327B66A6C000CBEA7 /* NSAttributedStringExtensions.swift */; };
+		D298452B27B6E2640086A8FE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D298452A27B6E2640086A8FE /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		D25EAC7F27B55DAF000CBEA7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D25EAC8027B566B9000CBEA7 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		D25EAC8327B66A6C000CBEA7 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
+		D298452A27B6E2640086A8FE /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				D25EABD527B164CA000CBEA7 /* BundleExtensions.swift */,
 				D25EABCA27B15D98000CBEA7 /* LocalizedStringConvertible.swift */,
 				D25EAC8327B66A6C000CBEA7 /* NSAttributedStringExtensions.swift */,
+				D298452A27B6E2640086A8FE /* StringExtensions.swift */,
 			);
 			name = Backend;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				D25EAC8427B66A6C000CBEA7 /* NSAttributedStringExtensions.swift in Sources */,
 				D25EABE827B1751A000CBEA7 /* Library.swift in Sources */,
 				D25EABEA27B1838B000CBEA7 /* UserDefaultExtensions.swift in Sources */,
+				D298452B27B6E2640086A8FE /* StringExtensions.swift in Sources */,
 				D25EABB327B14D49000CBEA7 /* AppDelegate.swift in Sources */,
 				D25EABF127B1B1CB000CBEA7 /* CategoryCell.swift in Sources */,
 			);
