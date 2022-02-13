@@ -52,6 +52,8 @@ class QuotesViewController: UIPageViewController {
         self.previousCategoryBarButtonItem.isEnabled = self.library.quote(before: quote) != nil
     }
 
+    // MARK: - Actions
+
     @IBAction func openForumBarButtonItemPressed (_ button: UIBarButtonItem) {
         UIApplication.shared.open(UserDefaults.standard.forumUrl)
     }
@@ -87,6 +89,8 @@ class QuotesViewController: UIPageViewController {
         }
     }
 
+
+    // MARK: - Navigation
     @IBAction func unwindSegue (_ segue: UIStoryboardSegue) {
         if segue.identifier == "UnwindBookmarks", let source = segue.source as? BookmarksViewController, let bookmark = source.selection,
             let quote = self.library.quote(at: bookmark) {
