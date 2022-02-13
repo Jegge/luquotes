@@ -20,6 +20,7 @@ extension NSAttributedString {
         self.init(attributedString: text)
     }
 
+    /// Returns a new `NSAttributedString` with a changed font face, but the same traits (bold, italic) and size
     func setting (font: UIFont) -> NSAttributedString {
         let result = NSMutableAttributedString(attributedString: self)
         self.enumerateAttribute(.font, in: NSRange(location: 0, length: self.length), options: .longestEffectiveRangeNotRequired) { attribute, range, _ in
@@ -31,6 +32,7 @@ extension NSAttributedString {
         return result
     }
 
+    /// Returns a new `NSAttributedString` with a changed foreground and background color.
     func setting (textColor: UIColor, backgroundColor: UIColor) -> NSAttributedString {
         let result = NSMutableAttributedString(attributedString: self)
         let attributes: [NSAttributedString.Key: Any] = [
@@ -41,6 +43,7 @@ extension NSAttributedString {
         return result
     }
 
+    /// Returns a new `NSAttributedString`, but updates all paragraph styles to use a given hyphenation factor.
     func setting (hyphenationFactor: Float) -> NSAttributedString {
         let result = NSMutableAttributedString(attributedString: self)
         self.enumerateAttribute(.paragraphStyle, in: NSRange(location: 0, length: self.length), options: .longestEffectiveRangeNotRequired) { attribute, range, _ in
