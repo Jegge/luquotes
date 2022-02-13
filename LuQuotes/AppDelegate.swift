@@ -37,12 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
 
-        navigationController.popToRootViewController(animated: false)
-        if let quotesViewController = navigationController.visibleViewController as? QuotesViewController {
-            quotesViewController.setCurrent(at: index, in: category)
+        if let bookmarksViewController = navigationController.visibleViewController as? BookmarksViewController {
+            bookmarksViewController.dismiss(animated: false) {
+                (navigationController.visibleViewController as? QuotesViewController)?.setCurrent(at: index, in: category)
+            }
             return true
         }
 
+        (navigationController.visibleViewController as? QuotesViewController)?.setCurrent(at: index, in: category)
         return false
     }
 }
