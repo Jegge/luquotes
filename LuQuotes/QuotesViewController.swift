@@ -11,6 +11,8 @@ class QuotesViewController: UIPageViewController {
     @IBOutlet var bookmarkBarButtonItem: UIBarButtonItem!
     @IBOutlet var previousCategoryBarButtonItem: UIBarButtonItem!
     @IBOutlet var nextCategoryBarButtonItem: UIBarButtonItem!
+    @IBOutlet var previousQuoteBarButtonItem: UIBarButtonItem!
+    @IBOutlet var nextQuoteBarButtonItem: UIBarButtonItem!
 
     private var library: Library!
 
@@ -49,7 +51,9 @@ class QuotesViewController: UIPageViewController {
 
     private func updateNavigationButtons (for quote: Quote) {
         self.nextCategoryBarButtonItem.isEnabled = self.library.quote(after: quote) != nil
+        self.nextQuoteBarButtonItem.isEnabled = self.library.quote(after: quote) != nil
         self.previousCategoryBarButtonItem.isEnabled = self.library.quote(before: quote) != nil
+        self.previousQuoteBarButtonItem.isEnabled = self.library.quote(before: quote) != nil
     }
 
     // MARK: - Actions
@@ -89,8 +93,26 @@ class QuotesViewController: UIPageViewController {
         }
     }
 
+    @IBAction func previousQuoteBarButtonItemPressed (_ button: UIBarButtonItem) {
+        guard let current = (self.viewControllers?.first as? QuoteViewController)?.quote else {
+            return
+        }
+        if let previous = self.library.quote(before: current) {
+            self.setCurrent(previous, direction: .reverse, animated: true)
+        }
+    }
+
+    @IBAction func nextQuoteBarButtonItemPressed (_ button: UIBarButtonItem) {
+        guard let current = (self.viewControllers?.first as? QuoteViewController)?.quote else {
+            return
+        }
+        if let next = self.library.quote(after: current) {
+            self.setCurrent(next, direction: .forward, animated: true)
+        }
+    }
 
     // MARK: - Navigation
+
     @IBAction func unwindSegue (_ segue: UIStoryboardSegue) {
         if segue.identifier == "UnwindBookmarks", let source = segue.source as? BookmarksViewController, let bookmark = source.selection,
             let quote = self.library.quote(at: bookmark) {

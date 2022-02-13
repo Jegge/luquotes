@@ -75,11 +75,23 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem springLoaded="YES" style="plain" systemItem="flexibleSpace" id="MOj-AR-wXW"/>
-                        <barButtonItem image="book" catalog="system" id="0sM-8d-Hg1">
+                        <barButtonItem image="arrowtriangle.left" catalog="system" id="hvj-cn-ihc">
+                            <connections>
+                                <action selector="previousQuoteBarButtonItemPressed:" destination="fAO-gy-ylq" id="Crq-WW-bPQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iAH-Ga-pUy"/>
+                        <barButtonItem image="book" catalog="system" id="0sM-8d-Hg1" userLabel="Open Bookmarks Button">
                             <connections>
                                 <segue destination="mgc-Od-z6t" kind="popoverPresentation" identifier="ShowBookmarks" popoverAnchorBarButtonItem="0sM-8d-Hg1" id="kbS-7o-4qX">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LLD-Tp-azB"/>
+                        <barButtonItem image="arrowtriangle.right" catalog="system" id="FZR-Zm-H3k">
+                            <connections>
+                                <action selector="nextQuoteBarButtonItemPressed:" destination="fAO-gy-ylq" id="yOB-KJ-vC5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem springLoaded="YES" style="plain" systemItem="flexibleSpace" id="Tjq-F0-wxm"/>
@@ -105,7 +117,9 @@
                     <connections>
                         <outlet property="bookmarkBarButtonItem" destination="Gno-0i-lf1" id="zB1-5i-imH"/>
                         <outlet property="nextCategoryBarButtonItem" destination="lw2-7c-Cjy" id="Cr9-dP-1Z4"/>
+                        <outlet property="nextQuoteBarButtonItem" destination="FZR-Zm-H3k" id="3js-qo-UYu"/>
                         <outlet property="previousCategoryBarButtonItem" destination="1Nt-94-OKi" id="LEl-po-3GU"/>
+                        <outlet property="previousQuoteBarButtonItem" destination="hvj-cn-ihc" id="fSU-Qn-Nhm"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByT-yw-eMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -115,8 +129,6 @@
         <!--Bookmarks View Controller-->
         <scene sceneID="OHn-l7-SEK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xNT-lC-V6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="ctf-oc-DE5" userLabel="Exit" sceneMemberID="exit"/>
                 <tableViewController id="mgc-Od-z6t" customClass="BookmarksViewController" customModule="LuQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="40t-CI-tKb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -203,6 +215,8 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNT-lC-V6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ctf-oc-DE5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1931.8840579710147" y="922.76785714285711"/>
         </scene>
@@ -231,11 +245,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowtriangle.left" catalog="system" width="128" height="113"/>
+        <image name="arrowtriangle.right" catalog="system" width="128" height="113"/>
         <image name="backward.end" catalog="system" width="128" height="120"/>
         <image name="book" catalog="system" width="128" height="99"/>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="forward.end" catalog="system" width="128" height="120"/>
-        <image name="logo" width="399" height="399"/>
+        <image name="logo" width="532" height="532"/>
         <image name="person.icloud" catalog="system" width="128" height="88"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
