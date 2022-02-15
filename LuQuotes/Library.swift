@@ -32,8 +32,12 @@ class Library {
         let searchableItems = self.quotes.keys
             .flatMap { category in self.quotes[category]!.enumerated().map { (category, $0.offset, (try? $0.element.strippedHtmlTags()) ?? "") } }
             .map { (category: Category, index: Int, message: String) -> CSSearchableItem in
-
-                let attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeData as String)
+                var attributeSet: CSSearchableItemAttributeSet
+                if #available(iOS 14.0, *) {
+                    attributeSet = CSSearchableItemAttributeSet(itemContentType: UTType.data.identifier)
+                } else {
+                    attributeSet = CSSearchableItemAttributeSet(itemContentType: kUTTypeData as String)
+                }
                 attributeSet.title = message
                 attributeSet.containerIdentifier = "\(category.rawValue)"
                 attributeSet.containerOrder = category.rawValue as NSNumber
