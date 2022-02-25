@@ -32,6 +32,22 @@ extension NSAttributedString {
         return result
     }
 
+    /// Returns a new `NSAttributedString` with an increased font size, but the same traits (bold, italic) and font face
+    func increasingFontSize (by pointSize: CGFloat) -> NSAttributedString {
+        if pointSize < .ulpOfOne {
+            return self
+        }
+
+        let result = NSMutableAttributedString(attributedString: self)
+        self.enumerateAttribute(.font, in: NSRange(location: 0, length: self.length), options: .longestEffectiveRangeNotRequired) { attribute, range, _ in
+            if let font = (attribute as? UIFont) {
+                let newFont = UIFont(descriptor: font.fontDescriptor, size: font.pointSize + pointSize)
+                result.addAttribute(.font, value: newFont, range: range)
+            }
+        }
+        return result
+    }
+
     /// Returns a new `NSAttributedString` with a changed foreground and background color.
     func setting (textColor: UIColor, backgroundColor: UIColor) -> NSAttributedString {
         let result = NSMutableAttributedString(attributedString: self)
