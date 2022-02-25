@@ -28,7 +28,8 @@ extension UserDefaults {
         static let currentCategory = "CurrentCategory"
         static let currentIndex = "CurrentIndex"
         static let bookmarks = "Bookmarks"
-        static let forumUrl = "forumUrl"
+        static let forumUrl = "ForumUrl"
+        static let largeFont = "LargeFont"
     }
 
     func register () {
@@ -36,7 +37,8 @@ extension UserDefaults {
             UserDefault.currentCategory: Category.introduction.rawValue,
             UserDefault.currentIndex: 0,
             UserDefault.bookmarks: Data(),
-            UserDefault.forumUrl: URL(string: "https://www.liberationunleashed.com/nation/")!
+            UserDefault.forumUrl: URL(string: "https://www.liberationunleashed.com/nation/")!,
+            UserDefault.largeFont: false
         ])
     }
 
@@ -69,5 +71,9 @@ extension UserDefaults {
 
     var forumUrl: URL {
         return self.url(forKey: UserDefault.forumUrl)!
+    }
+
+    var largeFont: Bool {
+        return self.bool(forKey: UserDefault.largeFont)
     }
 }
