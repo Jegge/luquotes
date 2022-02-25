@@ -17,3 +17,6 @@
 "Category_gate" = "Gate";
 "Category_afterGate" = "After Gate";
 
+"MenuOpenForumTitle" = "Open LU Forums in Safari…";
+"MenuOpenSettingsTitle" = "Open Settings…";
+"MenuCancelTitle" = "Cancel";

@@ -58,8 +58,22 @@ class QuotesViewController: UIPageViewController {
 
     // MARK: - Actions
 
-    @IBAction func openForumBarButtonItemPressed (_ button: UIBarButtonItem) {
-        UIApplication.shared.open(UserDefaults.standard.forumUrl)
+    @IBAction func showMenuBarButtonItemPressed (_ button: UIBarButtonItem) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: NSLocalizedString("MenuOpenForumTitle", comment: "Main menu entry"), style: .default) { _ in
+            UIApplication.shared.open(UserDefaults.standard.forumUrl)
+        })
+
+        alert.addAction(UIAlertAction(title: NSLocalizedString("MenuOpenSettingsTitle", comment: "Main menu entry"), style: .default) { _ in
+            if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+            }
+        })
+
+        alert.addAction(UIAlertAction(title: NSLocalizedString("MenuCancelTitle", comment: "Main menu entry"), style: .cancel, handler: nil))
+
+        self.present(alert, animated: true, completion: nil)
     }
 
     @IBAction func bookmarkBarButtonItemPressed (_ button: UIBarButtonItem) {
